@@ -24,6 +24,12 @@ npm install
 
 ## Konfigurasi
 
+Untuk membuat file `token.json`, jalankan perintah berikut di terminal:
+
+```sh
+node addToken.js
+```
+
 Sebelum menjalankan skrip, pastikan file `token.json` berisi data token dalam format berikut:
 
 ```json
@@ -40,13 +46,7 @@ Sebelum menjalankan skrip, pastikan file `token.json` berisi data token dalam fo
    ```sh
    npm start
    ```
-3. Skrip akan mulai berjalan dan secara otomatis menangani validasi harga serta pembaruan token jika diperlukan.
-
-Untuk mode pengembangan dengan **hot reload**, jalankan:
-
-```sh
-npm run dev
-```
+3. Skrip akan mulai berjalan dan secara otomatis serta pembaruan token jika diperlukan.
 
 ## Catatan Penting
 
