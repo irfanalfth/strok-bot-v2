@@ -1,0 +1,23 @@
+{
+  "name": "strok-bot",
+  "version": "2.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-cognito-identity-provider": "^3.758.0",
+    "@faker-js/faker": "^9.5.1",
+    "axios": "^1.8.1",
+    "cheerio": "^1.0.0",
+    "fs": "^0.0.1-security",
+    "user-agents": "^1.1.467"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  },
+  "author": "kzhiko",
+  "license": "DKB"
+}
