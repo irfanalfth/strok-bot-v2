@@ -41,7 +41,7 @@ const updateTokenJson = (oldToken, newToken) => {
     if (!tokenFound) return console.log(`Token ${oldToken} tidak ditemukan!`);
 
     fs.writeFileSync(filePath, JSON.stringify(updatedTokens, null, 2), "utf-8");
-    console.log(`🔄 Token diperbarui: ${oldToken} ➝ ${newToken}`);
+    console.log(`🔄 Token diperbarui`);
   } catch (error) {
     console.error("Gagal memperbarui token:", error);
   }
