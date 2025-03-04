@@ -13,7 +13,9 @@ const REGION = "ap-northeast-1"; // Pastikan region sesuai dengan AWS Cognito An
 const cognitoClient = new CognitoIdentityProviderClient({ region: REGION });
 
 const readTokens = () =>
-  JSON.parse(fs.readFileSync("../token.json", "utf-8").trim());
+  JSON.parse(
+    fs.readFileSync(path.join(__dirname, `../token.json`), "utf-8").trim()
+  );
 
 const delay = async (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
