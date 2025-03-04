@@ -2,12 +2,12 @@
 
 Terima kasih kepada [isansut](https://github.com/isansut/Strok-BOT).
 
-## Persyaratan
+## 🔹 Persyaratan
 
 Sebelum menjalankan skrip, pastikan Anda telah menginstal dependensi berikut:
 
 - **Node.js** (v14 atau lebih baru)
-- **Paket-paket NPM**:
+- **Paket NPM** yang diperlukan:
   - `axios`
   - `fs`
   - `user-agents`
@@ -15,6 +15,9 @@ Sebelum menjalankan skrip, pastikan Anda telah menginstal dependensi berikut:
   - `cheerio`
   - `@aws-sdk/client-cognito-identity-provider`
   - `@faker-js/faker`
+  - `puppeteer`
+  - `inquirer`
+  - `readline-sync`
 
 Untuk menginstalnya, jalankan perintah berikut di terminal:
 
@@ -22,34 +25,32 @@ Untuk menginstalnya, jalankan perintah berikut di terminal:
 npm install
 ```
 
-## Konfigurasi
-
-Untuk membuat file `token.json`, jalankan perintah berikut di terminal:
-
-```sh
-node addToken.js
-```
-
-Sebelum menjalankan skrip, pastikan file `token.json` berisi data token dalam format berikut:
-
-```json
-[
-  { "token": "TOKEN_1", "refreshToken": "REFRESH_TOKEN_1" },
-  { "token": "TOKEN_2", "refreshToken": "REFRESH_TOKEN_2" }
-]
-```
-
-## Cara Menjalankan Skrip
+## 🔹 Cara Menjalankan Skrip
 
 1. Pastikan Anda berada di direktori skrip.
-2. Jalankan perintah berikut di terminal:
+2. Jalankan perintah berikut untuk memulai bot dengan menu interaktif:
+
    ```sh
-   npm start
+   node index.js
    ```
-3. Skrip akan mulai berjalan dan secara otomatis serta pembaruan token jika diperlukan.
 
-## Catatan Penting
+3. Pilih salah satu opsi yang tersedia di menu:
 
-- Skrip ini berjalan dalam **loop tak terbatas**. Untuk menghentikan eksekusi, tekan `Ctrl + C`.
-- Jika terjadi error seperti `403 Forbidden` atau `invalid token`, pastikan token masih valid dan endpoint API masih aktif.
-- Untuk menghindari pemblokiran IP, gunakan **delay yang lebih panjang** di dalam loop utama.
+   - **Auto Reff & Generate** → Menjalankan skrip referral otomatis.
+   - **Auto Get Token** → Mengambil token secara otomatis.
+   - **Auto Verify Message** → Memverifikasi pesan secara otomatis.
+   - **Add Token** → Menambahkan token baru ke dalam file.
+   - **Replace Semua Text** → Mengganti seluruh teks dalam file tertentu.
+
+## 🔹 **Fitur Replace Semua Text**
+
+Opsi **Replace Semua Text** memungkinkan pengguna untuk mengganti isi file **secara keseluruhan** atau hanya mengganti teks tertentu.
+
+Format file yang didukung:  
+✅ `.json` ✅ `.txt` ✅ `.js` ✅ File teks lainnya.
+
+Untuk menjalankan fitur ini secara langsung tanpa menu, gunakan:
+
+```sh
+node script/replaceAll.js
+```

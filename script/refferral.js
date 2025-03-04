@@ -11,7 +11,7 @@ const PASSWORD = readline.question("Password Akun : ");
 const REFERRAL = readline.question("Reff : ");
 const MAX_ACCOUNTS = parseInt(readline.question("Jumlah Reff : "), 10);
 
-const ACCOUNTS_FILE = path.join(__dirname, `../res/${REFERRAL}.txt`);
+const ACCOUNTS_FILE = path.join(__dirname, `../data/${REFERRAL}.txt`);
 
 const delay = async (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -107,7 +107,7 @@ const resendCode = async (email) => {
 };
 
 const saveAccount = (email, password) => {
-  const accountData = `${email} || ${password}\n`;
+  const accountData = `${email}||${password}\n`;
 
   fs.appendFile(ACCOUNTS_FILE, accountData, (err) => {
     if (err) {
