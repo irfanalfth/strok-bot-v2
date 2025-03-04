@@ -1,7 +1,7 @@
 {
   "name": "strok-bot",
   "version": "2.0.0",
-  "description": "",
+  "description": "DKB",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -12,13 +12,14 @@
     "@faker-js/faker": "^9.5.1",
     "axios": "^1.8.1",
     "cheerio": "^1.0.0",
+    "child_process": "^1.0.2",
     "fs": "^0.0.1-security",
+    "inquirer": "^8.2.6",
     "readline-sync": "^1.4.10",
     "user-agents": "^1.1.467"
   },
   "devDependencies": {
     "nodemon": "^3.0.0"
   },
-  "author": "kzhiko",
-  "license": "DKB"
+  "author": "kzhiko"
 }

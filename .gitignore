@@ -1,3 +1,6 @@
-node_modules
-src
+node_modules/
+src/
 sample.json
+
+res/*
+!res/readme.txt
