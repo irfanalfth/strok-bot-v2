@@ -1,1 +1,0 @@
-Tempat akun Refferral kesimpan

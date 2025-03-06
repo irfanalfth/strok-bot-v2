@@ -1,5 +1,4 @@
 const axios = require("axios");
-const path = require("path");
 const fs = require("fs");
 const userAgent = require("user-agents");
 const {
@@ -14,9 +13,7 @@ const REGION = "ap-northeast-1"; // Pastikan region sesuai dengan AWS Cognito An
 const cognitoClient = new CognitoIdentityProviderClient({ region: REGION });
 
 const readTokens = () =>
-  JSON.parse(
-    fs.readFileSync(path.join(__dirname, `../token.json`), "utf-8").trim()
-  );
+  JSON.parse(fs.readFileSync("./token.json", "utf-8").trim());
 
 const delay = async (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -31,7 +28,7 @@ const generateHeaders = (authToken) => ({
 
 const updateTokenJson = (oldToken, newToken) => {
   try {
-    const filePath = "../token.json";
+    const filePath = "./token.json";
     const tokens = readTokens();
 
     let tokenFound = false;
@@ -44,7 +41,7 @@ const updateTokenJson = (oldToken, newToken) => {
     if (!tokenFound) return console.log(`Token ${oldToken} tidak ditemukan!`);
 
     fs.writeFileSync(filePath, JSON.stringify(updatedTokens, null, 2), "utf-8");
-    console.log(`🔄 Token diperbarui`);
+    console.log(`🔄 Token diperbarui: ${oldToken} ➝ ${newToken}`);
   } catch (error) {
     console.error("Gagal memperbarui token:", error);
   }

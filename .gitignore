@@ -3,3 +3,7 @@ src/
 
 data/*
 !data/readme.txt
+
+token.json
+
+backup

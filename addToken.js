@@ -1,7 +1,7 @@
 const fs = require("fs");
 const readline = require("readline-sync");
 
-const FILE_NAME = "../token.json";
+const FILE_NAME = "./token.json";
 
 // Cek apakah file token.json ada, jika tidak buat file baru
 if (!fs.existsSync(FILE_NAME)) {
